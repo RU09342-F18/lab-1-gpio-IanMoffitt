@@ -1,3 +1,12 @@
+## Reset Circuitry
+After reading over the data sheet and doing extensive research online, I found that the reset circuit should be set like a lowpass filter with a resistor value of 47k Ohms and a capacitor with a value of 1nF. Considering I was sick during the second lab period it was tough to find the capacitor, but it turns out that I had a electronics kit at home and had a capacitor labeled 102, this capacitor is equivalent to 1nF. Setting the filter up is shown in the picture provided.
+
+## Power Supply
+The power supply of the board is another important aspect of using the processor out of the dev board. The board operates on 5V, which is supplied by the dev board. VSS is GND which is also produced by the board.
+
+## LED Circuitry
+The voltage delivered out of any port is approximately 3.4V, so I needed to decide a safe voltage to be delivered out of the output to the LED. I looked up the safe current to pass through a Green and Red diode which is approximately 16-18mA. Knowing that a diode drops a constant voltage of 0.7V, I tried to figure out what resistor would be necessary to pass the recommended current of 17mA. Using Ohms law I deduced that the resistance should be about 268 Ohms, connecting the proper resistors in series produces this resistance.
+
 # Off Board Blink
 Now that we have the whole blinking LED out of the way, why don't we try making things a little more convenient by taking the G2553 off the development board and into a breadboard. In addition to the software, your README needs to also contain a picture of your circuit with at least 2 LEDs blinking all on a breadboard and without a development board. This means that you will need:
 * Proper power being supplied to the processor
